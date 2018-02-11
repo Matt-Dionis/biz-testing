@@ -37,12 +37,8 @@ export default {
       signup() {
         const { email, name, password } = this.$data;
         this.$apollo.mutate({
-
-          mutation: gql 'mutation ($name: Name, $email: Email, $password: Password) {
-            signup(name: $name, email: $email, password: $password) {
-             id 
-             }
-             }'
+          mutation {
+            signup(email: $email password: $password name: $name) {
         });
       }
     }
