@@ -1,0 +1,7 @@
+#import "./LocationFragment.gql"
+
+query location($place: String!) {
+  location(place: $place) {
+    ...locationFields
+  }
+}
